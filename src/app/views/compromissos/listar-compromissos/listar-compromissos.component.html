@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="row align-items-center gy-3 p-5">
+        <div class="text-md-start">
+          <section id="info" class="fs-5">
+            <p class="mt-4">
+              <span class="text-primary fw-semibold"></span> O "compromisso" no e-Agenda refere-se a
+              uma ferramenta essencial que possibilita aos usuários registrar, monitorar e gerenciar seus compromissos e
+              eventos diários. Isso inclui reuniões, eventos, tarefas agendadas, lembretes e outras atividades
+              programadas em um determinado horário ou data.
+            </p>
+          </section>
+
+          <h1 class="fw-bold text-primary">Listar Compromissos</h1>
+          <hr />
+        </div>
+
+        <div class="d-grid d-md-flex gap-1 mt-5">
+          <a [routerLink]="['/compromissos/inserir']" role="button" class="btn btn-primary me-md-1">
+            <i class="pi bi-plus-circle me-2"></i>
+            Novo Compromisso
+          </a>
+        </div>
+
+        <div class="row mt-3 g-2">
+          <div class="col-12 col-md-6 col-lg-4" *ngFor="let compromisso of compromissos">
+            <app-card-compromisso [compromisso]="compromisso"></app-card-compromisso>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="fixed-bottom text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-primary fw-semibold fs-5">
+          &copy; 2023 ERROS COMPANY. Todos os direitos reservados.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

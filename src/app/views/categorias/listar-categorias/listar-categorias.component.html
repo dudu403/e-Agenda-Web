@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="row align-items-center gy-3 p-5">
+        <div class="text-md-start">
+          <section id="info" class="fs-5">
+            <p class="mt-4">
+              <span class="text-primary fw-semibold"></span> A  "categoria" no e-Agenda se refere a um
+              recurso que possibilita aos usuários organizar e agrupar seus compromissos, tarefas, despesas ou outros
+              elementos de acordo com uma classificação predefinida. Cada categoria representa um grupo específico de
+              itens relacionados com características ou temas comuns.
+            </p>
+          </section>
+          <h1 class="fw-bold text-primary">Listar Categorias</h1>
+          <hr />
+        </div>
+
+        <div class="d-grid d-md-flex gap-1 mt-5">
+          <a [routerLink]="['/categorias/inserir']" role="button" class="btn btn-primary me-md-1">
+            <i class="pi pi-plus-circle me-2"></i>
+            Nova Categoria
+          </a>
+        </div>
+
+        <div class="row mt-3 g-2">
+          <div class="col-12 col-md-6 col-lg-3" *ngFor="let categoria of categorias">
+            <app-card-categoria [categorias]="categoria"></app-card-categoria>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="fixed-bottom text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-primary fw-semibold fs-5">
+          &copy; 2023 ERROS COMPANY. Todos os direitos reservados.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

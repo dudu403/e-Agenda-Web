@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="row align-items-center gy-3 p-5">
+        <div class="text-md-start">
+          <section id="info" class="fs-5">
+            <p class="mt-4">
+              <span class="text-primary fw-semibold"></span> O "contato" no e-Agenda se refere a uma
+              funcionalidade essencial que permite aos usuários armazenar, organizar e acessar informações sobre pessoas
+              com as quais eles interagem regularmente. Isso inclui dados como nomes, números de telefone, endereços de
+              e-mail e outras informações de contato relevantes.
+            </p>
+          </section>
+
+          <h1 class="fw-bold text-primary">Listar Contatos</h1>
+          <hr />
+        </div>
+
+        <div class="d-grid d-md-flex gap-1 mt-5">
+          <a [routerLink]="['/contatos/inserir']" role="button" class="btn btn-primary me-md-1">
+            <i class="pi pi-plus-circle me-2"></i>
+            Novo Contato
+          </a>
+        </div>
+
+        <div class="row mt-3 g-2">
+          <div class="col-12 col-md-6 col-lg-4" *ngFor="let contato of contatos">
+            <app-card-contato [contato]="contato"></app-card-contato>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="fixed-bottom bg-light text-center">
+    <div class="row">
+      <div class="fixed-bottom bg-light text-center">
+        <div class="text-primary fw-semibold fs-5">
+          &copy; 2023 ERROS COMPANY. Todos os direitos reservados.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
